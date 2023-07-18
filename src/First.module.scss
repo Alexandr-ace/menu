@@ -1,0 +1,96 @@
+.main {
+    display: flex;
+    height: 100px;
+    background-color: #4e28eb;
+    color: white;
+    .center {
+        font-size: 30px;
+        display: flex;
+        width: 1440px;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        &_left {
+            margin-left: 50px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &_right {
+            color: white;
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: 1025px) {
+                justify-content: right;
+            }
+            &_inside {
+                @media (max-width: 1025px) {
+                    display: none;
+                }
+            }
+            &_color {
+                border-radius: 30px;
+                background-color: aqua;
+                width: 140px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media (max-width: 1025px) {
+                    margin-right: 50px;
+                }
+            }
+            &_img {
+                width: 50px;
+                height: 50px;
+                display: none;
+                @media (max-width: 1025px) {
+                    display: block;
+                    margin-right: 50px;
+                }
+                &_imgc {
+                    width: 50px;
+                    height: 50px;
+                    display: none;
+                    @media (max-width: 1025px) {
+                        display: block;
+                        margin-right: 50px;
+                    }
+                }
+                &_img1 {
+                    display: none;
+                }
+            }
+            &_imgz {
+                width: 50px;
+                height: 50px;
+                display: none;
+                position: relative;
+                position: absolute;
+                top: 25px;
+                left: 758px;
+                right: 0;
+                @media (max-width: 1025px) {
+                    display: block;
+                }
+
+                &_imgx {
+                    display: none;
+                    width: 50px;
+                    height: 50px;
+                    @media (max-width: 1025px) {
+                        display: block;
+                    }
+                }
+                &_img2 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
