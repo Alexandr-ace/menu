@@ -4,15 +4,6 @@ const menu = require("./menu.png");
 const close = require("./close.png");
 
 const First = ({ setState, state, funct }) => {
-  let sup;
-  let man;
-  if (state === true) {
-    sup = styles.center_right_img_imgc;
-    man = styles.center_right_imgz_img2;
-  } else {
-    sup = styles.center_right_img_img1;
-    man = styles.center_right_imgz_imgx;
-  }
   return (
     <div className={styles.main}>
       <div className={styles.center}>
@@ -23,22 +14,25 @@ const First = ({ setState, state, funct }) => {
           <div className={styles.center_right_inside}>Products</div>
           <div className={styles.center_right_inside}>Contakt Us</div>
           <div className={styles.center_right_color}>Sign Up</div>
-          <div
-            onClick={() => {
-              funct(setState, state);
-            }}
-            className={styles.center_right_img}
-          >
-            <img className={sup} src={menu} alt="" />
-          </div>
-          <div
-            onClick={() => {
-              funct(setState, state);
-            }}
-            className={styles.center_right_imgz}
-          >
-            <img className={man} src={close} alt="" />
-          </div>
+          {state ? (
+            <div
+              onClick={() => {
+                funct(setState, state);
+              }}
+              className={styles.center_right_img}
+            >
+              <img className={styles.center_right_img} src={menu} alt="" />
+            </div>
+          ) : (
+            <div
+              onClick={() => {
+                funct(setState, state);
+              }}
+              className={styles.center_right_img}
+            >
+              <img className={styles.center_right_img} src={close} alt="" />
+            </div>
+          )}
         </div>
       </div>
     </div>
